@@ -1,0 +1,224 @@
+object Form1: TForm1
+  Left = 588
+  Top = 218
+  Width = 338
+  Height = 416
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 16
+    Top = 24
+    Width = 36
+    Height = 13
+    Caption = 'Voces'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Top = 88
+    Width = 49
+    Height = 13
+    Caption = 'Volumen'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 280
+    Top = 88
+    Width = 31
+    Height = 13
+    Caption = '100%'
+  end
+  object Label4: TLabel
+    Left = 16
+    Top = 56
+    Width = 46
+    Height = 13
+    Caption = 'Formato'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 16
+    Top = 120
+    Width = 28
+    Height = 13
+    Caption = 'Rate'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 16
+    Top = 152
+    Width = 41
+    Height = 13
+    Caption = 'Device'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 16
+    Top = 188
+    Width = 33
+    Height = 13
+    Caption = 'Texto'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 16
+    Top = 284
+    Width = 44
+    Height = 13
+    Caption = 'Archivo'
+  end
+  object ComboBoxVoices: TComboBox
+    Left = 72
+    Top = 20
+    Width = 200
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 0
+    Text = 'ComboBoxVoices'
+    OnChange = ComboBoxVoicesChange
+  end
+  object TrackBarVol: TTrackBar
+    Left = 64
+    Top = 82
+    Width = 217
+    Height = 25
+    Ctl3D = False
+    Max = 100
+    ParentCtl3D = False
+    Frequency = 5
+    TabOrder = 1
+    OnChange = TrackBarVolChange
+  end
+  object Button1: TButton
+    Left = 96
+    Top = 216
+    Width = 137
+    Height = 49
+    Caption = 'Reproducir'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Texto: TEdit
+    Left = 72
+    Top = 184
+    Width = 201
+    Height = 21
+    TabOrder = 3
+    Text = 'Texto'
+  end
+  object rate: TTrackBar
+    Left = 64
+    Top = 110
+    Width = 217
+    Height = 33
+    Min = -10
+    TabOrder = 4
+    OnChange = rateChange
+  end
+  object ComboBoxFormat: TComboBox
+    Left = 72
+    Top = 52
+    Width = 200
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 5
+    Text = 'ComboBoxFormat'
+    OnChange = ComboBoxFormatChange
+  end
+  object ComboBoxOutput: TComboBox
+    Left = 72
+    Top = 148
+    Width = 200
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 6
+    Text = 'ComboBoxOutput'
+    OnChange = ComboBoxOutputChange
+  end
+  object Button2: TButton
+    Left = 96
+    Top = 312
+    Width = 137
+    Height = 49
+    Caption = 'Generar Archivo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = Button2Click
+  end
+  object Edit1: TEdit
+    Left = 72
+    Top = 280
+    Width = 201
+    Height = 21
+    TabOrder = 8
+    Text = 'Edit1'
+  end
+  object SpVoice1: TSpVoice
+    AutoConnect = False
+    ConnectKind = ckRunningOrNew
+    Left = 272
+    Top = 16
+  end
+  object SpMMAudioOut1: TSpMMAudioOut
+    AutoConnect = False
+    ConnectKind = ckRunningOrNew
+    Left = 272
+    Top = 48
+  end
+  object SpAudioFormat1: TSpAudioFormat
+    AutoConnect = False
+    ConnectKind = ckRunningOrNew
+    Left = 280
+    Top = 168
+  end
+end
